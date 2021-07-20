@@ -1,0 +1,131 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.pickle"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->C:\AndroidProjects\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->C:\AndroidProjects\app\src\main\AndroidManifest.xml
+10    <!--
+11         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+12         Google Maps Android API v2, but you must specify either coarse or fine
+13         location permissions for the 'MyLocation' functionality.
+14    -->
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:9:5-67
+15-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:9:22-64
+16    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+16-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:10:5-81
+16-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:10:22-78
+17    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+17-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:11:5-79
+17-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:11:22-76
+18    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+18-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:12:5-80
+18-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:12:22-78
+19    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+19-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:13:5-78
+19-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:13:22-76
+20
+21    <uses-feature
+21-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:15:5-17:35
+22        android:glEsVersion="0x00020000"
+22-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:16:9-41
+23        android:required="true" />
+23-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:17:9-32
+24
+25    <queries>
+25-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\Одмен\.gradle\caches\transforms-2\files-2.1\f72297ca8b816024c4c77e7887a8c5ba\jetified-play-services-maps-17.0.1\AndroidManifest.xml:30:5-34:15
+26
+27        <!-- Needs to be explicitly declared on Android R+ -->
+28        <package android:name="com.google.android.apps.maps" />
+28-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\Одмен\.gradle\caches\transforms-2\files-2.1\f72297ca8b816024c4c77e7887a8c5ba\jetified-play-services-maps-17.0.1\AndroidManifest.xml:33:9-64
+28-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\Одмен\.gradle\caches\transforms-2\files-2.1\f72297ca8b816024c4c77e7887a8c5ba\jetified-play-services-maps-17.0.1\AndroidManifest.xml:33:18-61
+29    </queries>
+30
+31    <application
+31-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:19:5-52:19
+32        android:allowBackup="true"
+32-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:20:9-35
+33        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+33-->[androidx.core:core:1.5.0] C:\Users\Одмен\.gradle\caches\transforms-2\files-2.1\7f1da48487df7683694de7a1db66f12d\core-1.5.0\AndroidManifest.xml:24:18-86
+34        android:debuggable="true"
+35        android:icon="@mipmap/ic_launcher"
+35-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:21:9-43
+36        android:label="@string/app_name"
+36-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:22:9-41
+37        android:roundIcon="@mipmap/ic_launcher_round"
+37-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:23:9-54
+38        android:supportsRtl="true"
+38-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:24:9-35
+39        android:testOnly="true"
+40        android:theme="@style/AppTheme" >
+40-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:25:9-40
+41        <activity android:name="com.example.pickle.CreateMeetActivity" >
+41-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:26:9-28:20
+41-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:26:19-53
+42        </activity>
+43
+44        <meta-data
+44-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:30:9-32:55
+45            android:name="com.google.android.geo.API_KEY"
+45-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:31:13-58
+46            android:value="@string/google_maps_key" />
+46-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:32:13-52
+47
+48        <activity
+48-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:34:9-36:59
+49            android:name="com.example.pickle.MapsActivity"
+49-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:35:13-41
+50            android:label="@string/title_activity_maps" />
+50-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:36:13-56
+51
+52        <meta-data
+52-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:38:9-40:69
+53            android:name="com.google.android.gms.version"
+53-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:39:13-58
+54            android:value="@integer/google_play_services_version" />
+54-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:40:13-66
+55        <meta-data
+55-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:41:9-43:57
+56            android:name="preloaded_fonts"
+56-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:42:13-43
+57            android:resource="@array/preloaded_fonts" />
+57-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:43:13-54
+58
+59        <activity android:name="com.example.pickle.LoginActivity" >
+59-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:45:9-51:20
+59-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:45:19-48
+60            <intent-filter>
+60-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:46:13-50:29
+61                <action android:name="android.intent.action.MAIN" />
+61-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:47:17-69
+61-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:47:25-66
+62
+63                <category android:name="android.intent.category.LAUNCHER" />
+63-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:49:17-77
+63-->C:\AndroidProjects\app\src\main\AndroidManifest.xml:49:27-74
+64            </intent-filter>
+65        </activity>
+66        <!-- Needs to be explicitly declared on P+ -->
+67        <uses-library
+67-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\Одмен\.gradle\caches\transforms-2\files-2.1\f72297ca8b816024c4c77e7887a8c5ba\jetified-play-services-maps-17.0.1\AndroidManifest.xml:39:9-41:40
+68            android:name="org.apache.http.legacy"
+68-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\Одмен\.gradle\caches\transforms-2\files-2.1\f72297ca8b816024c4c77e7887a8c5ba\jetified-play-services-maps-17.0.1\AndroidManifest.xml:40:13-50
+69            android:required="false" />
+69-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\Одмен\.gradle\caches\transforms-2\files-2.1\f72297ca8b816024c4c77e7887a8c5ba\jetified-play-services-maps-17.0.1\AndroidManifest.xml:41:13-37
+70
+71        <activity
+71-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Одмен\.gradle\caches\transforms-2\files-2.1\cdc93d24d2a28eb67858f45debc7dcb8\jetified-play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+72            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+72-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Одмен\.gradle\caches\transforms-2\files-2.1\cdc93d24d2a28eb67858f45debc7dcb8\jetified-play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+73            android:exported="false"
+73-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Одмен\.gradle\caches\transforms-2\files-2.1\cdc93d24d2a28eb67858f45debc7dcb8\jetified-play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+74            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+74-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Одмен\.gradle\caches\transforms-2\files-2.1\cdc93d24d2a28eb67858f45debc7dcb8\jetified-play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+75    </application>
+76
+77</manifest>
