@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateMeetActivity"
+    android:theme="@android:style/Theme.Black.NoTitleBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#c0ccda"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/back_btn"
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginTop="20px"
+                    android:background="@drawable/back"
+                    android:fontFamily="@font/roboto" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="25px"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto"
+                    android:text="Новое мероприятие"
+                    android:textColor="#fdfdff"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/add_btn"
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:background="@drawable/check_mark_black_outline"
+                    android:fontFamily="@font/roboto" />
+
+            </LinearLayout>
+
+
+            <ScrollView
+                android:id="@+id/idScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:descendantFocusability="beforeDescendants">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fadeScrollbars="false"
+                        android:isScrollContainer="false"
+                        android:keepScreenOn="false"
+                        android:overScrollMode="ifContentScrolls"
+                        android:persistentDrawingCache="none"
+                        android:scrollbarAlwaysDrawVerticalTrack="false"
+                        android:scrollbarStyle="outsideOverlay">
+
+                        <fragment
+                            android:id="@+id/map2"
+                            android:layout_width="match_parent"
+                            android:layout_height="800px"
+                            class="com.example.pickle.WorkaroundMapFragment"/>
+
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="100px"
+                            android:layout_height="100px"
+                            app:layout_constraintBottom_toBottomOf="@+id/map2"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/map2"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/map_marker_icon" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/roboto"
+                            android:text="Название:"
+                            android:textColor="#485158"
+                            android:textSize="25sp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/Title_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:hint="Сосисочное пати" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#c0ccda"
+                        android:fontFamily="@font/roboto"
+                        android:paddingTop="15px"
+                        android:paddingBottom="15px"
+                        android:text="Ключевые слова"
+                        android:textColor="#465260"
+                        android:textSize="20sp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/Key_Words_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:hint="Вечеринка, прогулка, свидание" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#c0ccda"
+                        android:fontFamily="@font/roboto"
+                        android:paddingTop="15px"
+                        android:paddingBottom="15px"
+                        android:text="Информация"
+                        android:textColor="#465260"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="330px"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:text="Дата"
+                            android:textColor="#465260"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/Date_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:hint="17 Октября 2021" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="330px"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:text="Количество мест"
+                            android:textColor="#465260"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/Places_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:hint="10"
+                            android:inputType="number" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:text="Адрес"
+                            android:textColor="#465260"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/add_adress_btn"
+                            android:layout_width="100px"
+                            android:layout_height="100px"
+                            android:layout_marginLeft="120px"
+                            android:text="+" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/Adress_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/roboto"
+                            android:hint="ул.Ленина д.40"
+                            android:inputType="none" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="330px"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:text="Возрастное ограничение"
+                            android:textColor="#465260"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/Age_Limit_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:hint="18+"
+                            android:inputType="number" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="330px"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:text="Тематика"
+                            android:textColor="#465260"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/Theme_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:hint="Дружеская встреча" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#c0ccda"
+                        android:fontFamily="@font/roboto"
+                        android:paddingTop="15px"
+                        android:paddingBottom="15px"
+                        android:text="О мероприятии"
+                        android:textColor="#465260"
+                        android:textSize="20sp" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/textInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/About_et"
+                                android:layout_width="match_parent"
+                                android:layout_height="217dp"
+                                android:drawingCacheQuality="high"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/roboto"
+                                android:gravity="start"
+                                android:hint="Посиделки у костра"
+                                android:inputType="textMultiLine" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="450px"
+                            android:layout_height="450px"
+                            android:alpha="0.05"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/tap" />
+
+                        <TextView
+                            android:id="@+id/textView8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Нажмите чтобы начать писать"
+                            android:textColor="#26000000"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+        </RelativeLayout>
+        </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

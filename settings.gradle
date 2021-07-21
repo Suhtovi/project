@@ -1,0 +1,2 @@
+rootProject.name='Pickle'
+include ':app'
